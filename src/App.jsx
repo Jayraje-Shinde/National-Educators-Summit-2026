@@ -36,7 +36,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-slate-50 text-slate-900">
 
       {/* HERO */}
       <section className="border-b bg-white">
@@ -57,33 +57,42 @@ export default function App() {
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-xl border p-4">
+                <div className="rounded-xl border p-4 bg-white shadow-sm">
                   <p className="text-sm text-slate-500">Summit Date</p>
                   <p className="font-semibold">15 April 2026</p>
                 </div>
-                <div className="rounded-xl border p-4">
+                <div className="rounded-xl border p-4 bg-white shadow-sm">
                   <p className="text-sm text-slate-500">Venue</p>
                   <p className="font-semibold">Maulana Azad College, CSN</p>
                 </div>
-                <div className="rounded-xl border p-4 sm:col-span-2">
+                <div className="rounded-xl border p-4 sm:col-span-2 bg-white shadow-sm">
                   <p className="text-sm text-slate-500">Last Date</p>
                   <p className="font-semibold">10 April 2026</p>
                 </div>
               </div>
 
-              <div className="mt-8 flex gap-4">
-                <a href="https://forms.gle/tscirfvKb54wunnb7" target="_blank"
-                  className="px-6 py-3 bg-slate-900 text-white rounded-lg font-semibold">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://forms.gle/tscirfvKb54wunnb7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-slate-900 text-white rounded-lg font-semibold text-center"
+                >
                   Register Now
                 </a>
-                <a href="mailto:ashveenallp@gmail.com?subject=Paper%20Submission%20%E2%80%93%20National%20Educators%20Summit%202026&body=Respected%20Sir%2FMadam%2C%0A%0APlease%20find%20attached%20my%20paper%20submission%20for%20the%20National%20Educators%20Summit%202026.%0A%0ATitle%20of%20Paper%3A%0AName%20of%20Author%3A%0AInstitution%3A%0AContact%20Number%3A%0A%0ARegards%2C" target="_blank"
-                  className="px-6 py-3 border rounded-lg font-semibold hover:bg-slate-100">
+
+                <a
+                  href="mailto:ashveenallp@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border rounded-lg font-semibold hover:bg-slate-100 text-center"
+                >
                   Submit Paper
                 </a>
               </div>
             </div>
 
-            <div className="bg-slate-100 p-6 rounded-2xl">
+            <div className="bg-white p-6 rounded-2xl shadow-md">
               <h2 className="text-xl font-bold">Quick Info</h2>
 
               <div className="mt-4 space-y-4">
@@ -122,7 +131,7 @@ export default function App() {
           <h2 className="text-xl font-bold">Call for Papers</h2>
           <div className="mt-4 space-y-2">
             {themes.map((t) => (
-              <div key={t} className="p-3 bg-slate-100 rounded">
+              <div key={t} className="p-3 bg-white rounded shadow-sm">
                 {t}
               </div>
             ))}
@@ -133,7 +142,7 @@ export default function App() {
           <h2 className="text-xl font-bold">Paper Types</h2>
           <div className="mt-4 space-y-2">
             {paperTypes.map((p) => (
-              <div key={p} className="p-3 bg-slate-100 rounded">
+              <div key={p} className="p-3 bg-white rounded shadow-sm">
                 {p}
               </div>
             ))}
@@ -147,7 +156,7 @@ export default function App() {
         <h2 className="text-2xl font-bold">National Awards</h2>
         <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
           {awards.map((a) => (
-            <div key={a} className="p-4 border rounded-xl">
+            <div key={a} className="p-4 border rounded-xl bg-white shadow-sm text-center">
               🏆 {a}
             </div>
           ))}
@@ -177,6 +186,6 @@ export default function App() {
         </div>
       </section>
 
-    </div>
+    </main>
   );
 }
